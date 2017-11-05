@@ -1,0 +1,25 @@
+<%= form_with(model: ballot, local: true) do |form| %>
+  <% if ballot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ballot.errors.count, "error") %> prohibited this ballot from being saved:</h2>
+
+      <ul>
+      <% ballot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <input type="radio" id="c1" name="ballot[name]" value="Wakeeza">
+  <label for="c1">Wakeeza</label>
+
+  <hr/>
+  
+  <input type="radio" id="c2" name="ballot[name]" value="Strawberry">
+  <label for="c2">Strawberry</label>
+
+  <div class="actions">
+    <%= form.submit value="Vote"%>
+  </div>
+<% end %>

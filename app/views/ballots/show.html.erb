@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ballot.name %>
+</p>
+
+<%= link_to 'Edit', edit_ballot_path(@ballot) %> |
+<%= link_to 'Back', ballots_path %>
