@@ -157,6 +157,18 @@ p {
   font-weight: 700;
 }
 
+.blue {
+  display: inline-block;
+  color: blue;
+  font-weight: 700;
+}
+
+.yellow {
+  display: inline-block;
+  color: yellow;
+  font-weight: 700;
+}
+
 #overlay-content{
   margin-top: -100px;
   border-radius: 20px;
@@ -169,17 +181,31 @@ p {
   padding: 30px;
 }
 
+.results {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  margin: auto;
+  margin-top: 100px;
+  width: 50%;
+  text-align: center;
+  padding-left: 0;
+}
 
 // results page content ///////////////////////////////////////
 
 .meter {
   height: 80px;
   position: relative;
+  background-color: black;
+  border-radius: 15px;
   width: 100%;
+  font-family: 'Permanent Marker', cursive;
+  text-align: left;
 }
 
 .meter > span {
   display: block;
+  border-radius: 15px;
   height: 100%;
   width: 100%;
   background-color: rgb(43,194,83);

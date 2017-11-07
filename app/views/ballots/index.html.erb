@@ -1,34 +1,38 @@
 
-<% wvalue = @votesforwakeeza %>
-<% svalue = @votesforstrawberry %>
+<% wcount = @votesforwakeeza %>
+<% scount = @votesforstrawberry %>
 
-<% wvalue = wvalue.to_f %>
-<% svalue = svalue.to_f %>
+<% wcount = wcount.to_f %>
+<% scount = scount.to_f %>
 
-<% total = wvalue + svalue %>
+<% total = wcount + scount %>
 <% total = total.to_f %>
 
-<% wprog = wvalue / total %>
-<% sprog = svalue / total %>
+<% wprog = wcount / total %>
+<% sprog = scount / total %>
 
 <% wprog = wprog * 100 %>
 <% sprog = sprog * 100 %>
 
 <% wprog = wprog.round %>
 <% sprog = sprog.round %>
+<% wcount = wcount.round %>
+<% scount = scount.round %>
 <% total = total.round %>
 
-<%= total %>
+<div class="results">
 
-<h1>Ballots</h1>
+  <h1 style="margin-bottom: 0;"><span class="yellow"><%= total %></span> votes have been cast. </h1>
+  <h2 style="margin-top: 0;"><span class="blue"><%= wcount %></span> for Wakeeza; <span class="red"><%= scount %></span> for Strawberry.</h2>
 
-<p>Wakeeza total: <%= wvalue %>, <%= wprog %></p>
-<p>Strawberry total: <%= svalue %>, <%= sprog %></p>
+  <div class="meter blue">
+    <span style="width: <%= wprog %>%"><h2 class="bartext">(<%= wprog %>%) WAKEEZA</h2></span>
+  </div>
 
-<div class="meter blue">
-  <span style="width: <%= wprog %>%"><h2 class="bartext">(<%= wprog %>%) WAKEEZA</h2></span>
-</div>
+  <div class="meter red">
+    <span style="width: <%= sprog %>%"><h2 class="bartext">(<%= sprog %>%) STRAWBERRY</h2></span>
+  </div>
 
-<div class="meter red">
-  <span style="width: <%= sprog %>%"><h2 class="bartext">(<%= sprog %>%) STRAWBERRY</h2></span>
+  <h3>[tinyurl.com/thisisallthatmatters]</h3>
+
 </div>
