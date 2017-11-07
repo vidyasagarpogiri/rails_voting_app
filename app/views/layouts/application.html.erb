@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="display:none;">
     <%= yield %>
   </body>
 
@@ -33,6 +33,16 @@
 
   setTimeout(function(){
     $("#overlay").fadeOut();
-  }, 5000);
+  }, 7000);
+  </script>
+
+  <script>
+  $(document).ready(function(){
+
+  /*! Fades in page on load */
+  $('body').css('display', 'none');
+  $('body').fadeIn(1000);
+
+  });
   </script>
 </html>

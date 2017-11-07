@@ -1,25 +1,34 @@
-<p id="notice"><%= notice %></p>
+
+<% wvalue = @votesforwakeeza %>
+<% svalue = @votesforstrawberry %>
+
+<% wvalue = wvalue.to_f %>
+<% svalue = svalue.to_f %>
+
+<% total = wvalue + svalue %>
+<% total = total.to_f %>
+
+<% wprog = wvalue / total %>
+<% sprog = svalue / total %>
+
+<% wprog = wprog * 100 %>
+<% sprog = sprog * 100 %>
+
+<% wprog = wprog.round %>
+<% sprog = sprog.round %>
+<% total = total.round %>
+
+<%= total %>
 
 <h1>Ballots</h1>
-<%= @votesforwakeeza %>
-<%= @votesforstrawberry %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<p>Wakeeza total: <%= wvalue %>, <%= wprog %></p>
+<p>Strawberry total: <%= svalue %>, <%= sprog %></p>
 
-  <tbody>
-    <% @ballots.each do |ballot| %>
-      <tr>
-        <td><%= ballot.name %></td>
-        <td><%= link_to 'Show', ballot %></td>
-        <td><%= link_to 'Edit', edit_ballot_path(ballot) %></td>
-        <td><%= link_to 'Destroy', ballot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="meter blue">
+  <span style="width: <%= wprog %>%"><h2 class="bartext">(<%= wprog %>%) WAKEEZA</h2></span>
+</div>
+
+<div class="meter red">
+  <span style="width: <%= sprog %>%"><h2 class="bartext">(<%= sprog %>%) STRAWBERRY</h2></span>
+</div>
