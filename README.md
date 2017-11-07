@@ -1,24 +1,20 @@
-# README
+Project Page: Rails Voting App
+===============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What is it?
+----------
+This is a brief exercise in (1) prompting the user to vote between two options, (2) store that data in the database, and (3) pull the collective information and visualize it using JavaScript and CSS.
 
-Things you may want to cover:
 
-* Ruby version
+Context
+-------
+The choice that I coded is something of an inside-joke with some friends of mine. We were talking about ridiculous names that people give to their children, and I prompted the group to consider the question, "Would you rather be named WAKEEZA, or STRAWBERRY?"
 
-* System dependencies
+The results were fairly split, and I've made it a habit to ask someone whenever I'm meeting them for the first time. Again, the names don't mean anything in particular-- there's nothing grand or profound about them. Likewise, the tinyurl (/thisisallthatmatters) is a poke at how silly the entire exercise is.
 
-* Configuration
+To that end, I'm proud to say that I'm #teamStrawberry for life. 
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+External Links
+--------
++ tinyurl.com/thisisallthatmatters (Demo)
